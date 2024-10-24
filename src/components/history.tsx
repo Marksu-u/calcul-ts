@@ -17,7 +17,7 @@ const History: React.FC<HistoryProps> = ({ items, onItemClick }) => {
             <ul className='history-list'>
                 {items.map((item, index) => (
                     <li key={index} onClick={() => onItemClick(item.expression)}>
-                        <span className='expression'>{item.expression}</span>
+                        <span className='expression'>{item.expression} = </span>
                         <span className='result'>{item.result}</span>
                     </li>
                 ))}
