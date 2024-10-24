@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import Calculator from './pages/calculator'
-import TemperatureConverter from './pages/temp'
+import Converter from './pages/converters'
 
 function App() {
   const [activeTab, setActiveTab] = useState<'calculator' | 'converter'>('calculator');
@@ -19,11 +19,11 @@ function App() {
           onClick={() => setActiveTab('converter')}
           className={activeTab === 'converter' ? 'active' : ''}
         >
-          Temperature Converter
+          Converter
         </button>
       </div>
       <div className="tab-content">
-        {activeTab === 'calculator' ? <Calculator /> : <TemperatureConverter />}
+        {activeTab === 'calculator' ? <Calculator /> : <Converter />}
       </div>
     </div>
   )
